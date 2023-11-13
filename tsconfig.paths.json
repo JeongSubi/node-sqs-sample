@@ -3,6 +3,13 @@
     "baseUrl": "./",
     "paths": {
       "@src/*": ["src/*"],
+      "@broker/*": ["src/broker/*"],
+      "@common/*": ["src/common/*"],
+      "@config/*": ["src/config/*"],
+      "@protocol/*": ["src/protocol/*"],
+      "@publisher/*": ["src/publisher/*"],
+      "@subscriber/*": ["src/subscriber/*"],
+      "@worker/*": ["src/worker/*"]
     }
   }
 }

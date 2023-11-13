@@ -1,12 +1,12 @@
-import express, {Request,Response, Express} from "express";
+import worker from "./worker";
 
-const app: Express = express();
-const port: number = 4000;
+const startApplication = async (): Promise<void> => {
+    try {
+        await worker();
+    } catch (error: unknown) {
+        console.log(error);
+    }
+};
 
-app.get('/', (req: Request, res: Response) => {
-    res.send('Hello World!')
-})
 
-app.listen(port, () => {
-    console.log('localhost ' + port + ' opened!!');
-});
+startApplication();
